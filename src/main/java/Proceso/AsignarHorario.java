@@ -5,19 +5,18 @@
  */
 package Proceso;
 
+import Interfaces.ObtenerCarrera;
 import Objetos.Carrera;
 import Objetos.Estudiante;
 import Objetos.Horario;
 import Objetos.RegistroAcademico;
-import java.util.ArrayList;
-import java.util.List;
 
 public class AsignarHorario {
 
     public AsignarHorario() {
     }
     
-    
+    ObtenerCarrera obtener0c;
 
     public Horario generarHorario(Carrera carrera, RegistroAcademico carnet) throws Exception {
         Horario horario = new Horario();
@@ -84,5 +83,9 @@ public class AsignarHorario {
         }
 
         return null;
+    }
+
+    public Carrera obtenerCarrera(int codigo, String descripcion){
+        return  obtener0c.obtener(codigo, descripcion);
     }
 }
